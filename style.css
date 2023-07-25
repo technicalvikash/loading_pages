@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html{
+	height: 100%;
+	width:100%;
+}
+@-moz-keyframes move-astronaut {
+    100% { -moz-transform: translate(-160px, -160px);}
+}
+@-webkit-keyframes move-astronaut {
+    100% { -webkit-transform: translate(-160px, -160px);}
+}
+@keyframes move-astronaut{
+    100% { -webkit-transform: translate(-160px, -160px); transform:translate(-160px, -160px); }
+}
+@-moz-keyframes rotate-astronaut {
+    100% { -moz-transform: rotate(-720deg);}
+}
+@-webkit-keyframes rotate-astronaut {
+    100% { -webkit-transform: rotate(-720deg);}
+}
+@keyframes rotate-astronaut{
+    100% { -webkit-transform: rotate(-720deg); transform:rotate(-720deg); }
+}
+
+.canvas{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(https://free4kwallpapers.com/uploads/originals/2023/02/27/galaxy-cloud-wallpaper.jpg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.object_astronaut{
+    animation: rotate-astronaut 300s infinite linear both alternate;
+}
+
+.box_astronaut{
+    z-index: 110 !important;
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    will-change: transform;
+    animation: move-astronaut 15s infinite linear both alternate;
+}
+.box_astronaut{
+	top: 70%;
+}
+.object_astronaut{
+    animation: rotate-astronaut 200s infinite linear both alternate;
+}
+
+
+.rocket{
+	position: relative;
+	animation: ranimate 0.2s ease infinite;
+}
+
+
+.rocket img{
+	display: inline-block;
+	width: 50px;
+	height: auto;
+}
+
+
+@keyframes ranimate{
+	0%,100%{
+		transform: translateY(-1px);
+	}
+
+	50%{
+		transform: translateY(1px);
+	}
+}
+
+.rocket:before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 60%;
+	top: 100%;
+	background: linear-gradient(#e67e22, #f39c12 10%, transparent);
+	filter: blur(2px);
+}
+
+.rocket:after{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 60%;
+	top: 100%;
+	right: 0;
+	background: linear-gradient(#e67e22, #f39c12 10%, transparent);
+	filter: blur(2px);
+}
+
+.rocket span{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 80%;
+	top: 100%;
+	left: 17px;
+	background: linear-gradient(#e67e22, #f39c12 10%, transparent);
+	filter: blur(2px);
+}
+.central-body{
+	/*    width: 100%;*/
+		padding: 17% 5% 10% 5%;
+		text-align: bottom;
+	}
+
+
+.canvas i{
+	position: absolute;
+	top: -150px;
+	background: rgba(255,255,255,.5);
+	animation: sanimate linear infinite;
+}
+
+
+@keyframes sanimate{
+	0%{
+		transform: translateY(0);
+	}
+
+	100%{
+		transform: translateY(100vh);
+	}
+}
+
+
+
+
